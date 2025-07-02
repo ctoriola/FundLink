@@ -11,160 +11,66 @@ export default function ContactPage() {
       <DesktopNav currentPage="/contact" />
 
       {/* Contact Hero */}
-      <section className="bg-[#e8e6d8] pt-20 px-6 py-20">
-        <div className="max-w-7xl mx-auto text-center">
+      <section className="bg-[#e8e6d8] pt-20 px-6 py-20 relative overflow-hidden">
+        {/* SVG Background Shape */}
+        <svg className="absolute left-0 top-0 w-full h-full pointer-events-none z-0" viewBox="0 0 1440 320" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path fill="#a8b5a0" fillOpacity="0.15" d="M0,160L60,170.7C120,181,240,203,360,197.3C480,192,600,160,720,133.3C840,107,960,85,1080,101.3C1200,117,1320,171,1380,197.3L1440,224L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
+        </svg>
+        <div className="relative z-10 max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-gray-800 mb-8">Contact Us</h1>
           <p className="text-xl text-gray-700 mb-12 max-w-4xl mx-auto">
-            Ready to make a difference? Get in touch with us to learn more about our work or explore partnership
-            opportunities.
+            Ready to make a difference? Get in touch with us to learn more about our work or explore partnership opportunities.
           </p>
         </div>
       </section>
+      {/* SVG Wave Divider */}
+      <div className="w-full overflow-hidden -mt-2" aria-hidden="true">
+        <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-12">
+          <path d="M0,30 Q360,60 720,30 T1440,30 V60 H0 Z" fill="#fff" />
+        </svg>
+      </div>
 
       {/* Contact Form */}
       <section className="bg-white px-6 py-20">
         <div className="max-w-4xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-8">Get in touch</h2>
-              <p className="text-gray-700 text-lg leading-relaxed mb-8">
-                Whether you're interested in partnering with us, learning about our projects, or exploring ways to get
-                involved, we'd love to hear from you.
-              </p>
-
-              <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-[#a8b5a0] rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-white text-xl">📍</span>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">Address</h3>
-                    <p className="text-gray-700">
-                      No.5, Kwaji Close, Maitama
-                      <br />
-                      Abuja, FCT, Nigeria
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-[#a8b5a0] rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-white text-xl">📞</span>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">Phone</h3>
-                    <p className="text-gray-700">+2348056504237</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-[#a8b5a0] rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-white text-xl">✉️</span>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">Email</h3>
-                    <a href="mailto:contact@fundlinkaid.org" className="text-[#a8b5a0] hover:text-gray-800 font-medium">
-                      contact@fundlinkaid.org
-                    </a>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-[#a8b5a0] rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-white text-xl">🕒</span>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">Office Hours</h3>
-                    <p className="text-gray-700">
-                      Monday - Friday
-                      <br />
-                      8:00 AM - 6:00 PM WAT
-                    </p>
-                  </div>
-                </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-8">Get in touch</h2>
+          <p className="text-gray-700 text-lg leading-relaxed mb-8">
+            Whether you're interested in partnering with us, learning about our projects, or exploring ways to get involved, we'd love to hear from you.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="flex flex-col items-center text-center">
+              <div className="w-12 h-12 bg-[#a8b5a0] rounded-full flex items-center justify-center mb-3">
+                <span className="text-white text-xl">📍</span>
               </div>
+              <h3 className="font-semibold text-gray-800 mb-1">Address</h3>
+              <p className="text-gray-700 text-sm">
+                No.5, Kwaji Close, Maitama<br />Abuja, FCT, Nigeria
+              </p>
             </div>
-
-            <div className="bg-[#f8f9fa] p-8 rounded-lg">
-              <h3 className="text-2xl font-bold text-gray-800 mb-6">Send us a message</h3>
-              <form className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-2">
-                      First Name
-                    </label>
-                    <input
-                      type="text"
-                      id="firstName"
-                      name="firstName"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#a8b5a0] focus:border-transparent"
-                      required
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-2">
-                      Last Name
-                    </label>
-                    <input
-                      type="text"
-                      id="lastName"
-                      name="lastName"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#a8b5a0] focus:border-transparent"
-                      required
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                    Email Address
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#a8b5a0] focus:border-transparent"
-                    required
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
-                    Subject
-                  </label>
-                  <select
-                    id="subject"
-                    name="subject"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#a8b5a0] focus:border-transparent"
-                    required
-                  >
-                    <option value="">Select a subject</option>
-                    <option value="partnership">Partnership Inquiry</option>
-                    <option value="project">Project Information</option>
-                    <option value="volunteer">Volunteer Opportunities</option>
-                    <option value="donation">Donation Information</option>
-                    <option value="general">General Inquiry</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={6}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#a8b5a0] focus:border-transparent"
-                    placeholder="Tell us how we can help you..."
-                    required
-                  ></textarea>
-                </div>
-
-                <Button type="submit" className="w-full bg-[#a8b5a0] hover:bg-[#8fa08a] text-gray-800 font-semibold py-3">
-                  Send Message
-                </Button>
-              </form>
+            <div className="flex flex-col items-center text-center">
+              <div className="w-12 h-12 bg-[#a8b5a0] rounded-full flex items-center justify-center mb-3">
+                <span className="text-white text-xl">📞</span>
+              </div>
+              <h3 className="font-semibold text-gray-800 mb-1">Phone</h3>
+              <p className="text-gray-700 text-sm">+2348056504237</p>
+            </div>
+            <div className="flex flex-col items-center text-center">
+              <div className="w-12 h-12 bg-[#a8b5a0] rounded-full flex items-center justify-center mb-3">
+                <span className="text-white text-xl">✉️</span>
+              </div>
+              <h3 className="font-semibold text-gray-800 mb-1">Email</h3>
+              <a href="mailto:contact@fundlinkaid.org" className="text-[#a8b5a0] hover:text-gray-800 font-medium text-sm">
+                contact@fundlinkaid.org
+              </a>
+            </div>
+            <div className="flex flex-col items-center text-center">
+              <div className="w-12 h-12 bg-[#a8b5a0] rounded-full flex items-center justify-center mb-3">
+                <span className="text-white text-xl">🕒</span>
+              </div>
+              <h3 className="font-semibold text-gray-800 mb-1">Office Hours</h3>
+              <p className="text-gray-700 text-sm">
+                Monday - Friday<br />8:00 AM - 6:00 PM WAT
+              </p>
             </div>
           </div>
         </div>

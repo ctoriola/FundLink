@@ -11,14 +11,24 @@ export default function PartnershipPage() {
       <DesktopNav currentPage="/partnership" />
 
       {/* Partnership Hero */}
-      <section className="bg-[#e8e6d8] pt-20 px-6 py-20">
-        <div className="max-w-7xl mx-auto text-center">
+      <section className="bg-[#e8e6d8] pt-20 px-6 py-20 relative overflow-hidden">
+        {/* SVG Background Shape */}
+        <svg className="absolute left-0 top-0 w-full h-full pointer-events-none z-0" viewBox="0 0 1440 320" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path fill="#a8b5a0" fillOpacity="0.15" d="M0,160L60,170.7C120,181,240,203,360,197.3C480,192,600,160,720,133.3C840,107,960,85,1080,101.3C1200,117,1320,171,1380,197.3L1440,224L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
+        </svg>
+        <div className="relative z-10 max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-gray-800 mb-8">Partnerships and Collaborations</h1>
           <p className="text-xl text-gray-700 mb-12 max-w-4xl mx-auto">
             Join us in building a sustainable future through strategic partnerships and collaborative initiatives across governments, businesses, and non-profit organizations.
           </p>
         </div>
       </section>
+      {/* SVG Wave Divider */}
+      <div className="w-full overflow-hidden -mt-2" aria-hidden="true">
+        <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-12">
+          <path d="M0,30 Q360,60 720,30 T1440,30 V60 H0 Z" fill="#fff" />
+        </svg>
+      </div>
 
       {/* Partnership Types */}
       <section className="bg-white px-6 py-20">
